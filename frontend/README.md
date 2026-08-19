@@ -1,16 +1,128 @@
-# React + Vite
+# 🛍️ E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **E-Commerce Website frontend** built with React.js. The project provides a smooth shopping experience with product browsing, searching, filtering, product details, and cart management.
 
-Currently, two official plugins are available:
+> **Status:** Frontend Completed ✅ | Backend Coming Soon 🚧
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🏠 Responsive Home Page
+- 🔍 Product Search
+- 🛍️ Product Collection & Filtering
+- 📦 Product Details
+- 🛒 Add to Cart & Quantity Management
+- 📱 Responsive Design
+- ⚡ Single Page Application (SPA)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+### React.js
+
+Used to build the user interface with reusable components and React Hooks.
+
+### JavaScript (ES6+)
+
+Used for application logic, product filtering, searching, cart functionality, and user interactions.
+
+### React Router DOM
+
+Used for navigation between pages without reloading the application.
+
+### React Context API
+
+Used for managing global state such as products, search, and cart data.
+
+### CSS
+
+Used for styling the application and creating a responsive layout for different screen sizes.
+
+### Vite
+
+Used as the frontend development and build tool for fast development and production builds.
+
+---
+
+## 📂 Project Structure
+
+```text
+frontend/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── ...
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Navigate to the project
+
+```bash
+cd frontend
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+The application will run on the local URL provided by Vite, usually:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🚧 Future Improvements
+
+The backend will be added in the next phase.
+
+Planned features include:
+
+- User authentication
+- Database integration
+- Backend APIs
+- Persistent cart
+- Order management
+- Admin dashboard
+- Product management
+- Payment integration
+
+---
+
+## 👨‍💻 Author
+
+**Atharv Ranjan**
+
+B.Tech CSE — Data Science & Cloud Computing
+Sarla Birla University, Ranchi
+
+---
+
+> This project is currently focused on the frontend and is being developed as a learning and portfolio project.
