@@ -120,7 +120,7 @@ Planned features include:
 
 **Atharv Ranjan**
 
-B.Tech CSE — Data Science & Cloud Computing
+B.Tech CSE — (Data Science & Cloud Computing)
 Sarla Birla University, Ranchi
 
 ---
