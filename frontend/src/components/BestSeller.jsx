@@ -1,5 +1,5 @@
 import React from "react";
-import { ShopContext } from "../context/shopContext";
+import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
 
@@ -17,7 +17,8 @@ const BestSeller = () => {
       <div className="text-center py-8 text-3xl">
         <Title text1="BEST " text2="SELLER" />
         <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Lorem ipsum text.
+          Discover our most-loved products, chosen for their quality, style, and
+          value.
         </p>
       </div>
 

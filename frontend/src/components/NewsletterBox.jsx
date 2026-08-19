@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewsletterBox = () => {
+const NewsLetterBox = () => {
   const OnsubmitHandler = (event) => {
     event.preventDefault();
   };
@@ -10,7 +10,9 @@ const NewsletterBox = () => {
       <p className="text-2xl font-medium text-gray-800">
         Subscribe now and get 20% off your first order!
       </p>
-      <p className="text-gray-600 mt-3">Lorem ipsum text</p>
+      <p className="text-gray-600 mt-3">
+        Sign up to receive updates on new arrivals, special offers, and more.
+      </p>
       <form
         onSubmit={OnsubmitHandler}
         className="w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3"
@@ -32,4 +34,4 @@ const NewsletterBox = () => {
   );
 };
 
-export default NewsletterBox;
+export default NewsLetterBox;

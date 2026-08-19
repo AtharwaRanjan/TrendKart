@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
         <div>
-          <img src={assets.logo} className="mb-5 w-32 " />
+          <img src={assets.logo} alt="TrendKart logo" className="mb-5 w-32" />
           <p className="text-gray-400 w-full md:w-2/3">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             euismod, nunc ut
@@ -32,7 +32,7 @@ const Footer = () => {
       <div>
         <hr />
         <p className="py-5 text-sm text-center">
-          Copyright 2026@ TrendKart.com- All rights reserved
+          Copyright © 2026 TrendKart. All rights reserved.
         </p>
       </div>
     </div>

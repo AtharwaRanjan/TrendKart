@@ -13,8 +13,11 @@ a.active hr {
   font-family: "Outfit", sans-serif;
 }
 @media (max-width: 640px) {
-  a.acitve {
+  a.active {
     background-color: black;
     color: white;
   }
+}
+::-webkit-scrollbar {
+  display: none;
 }

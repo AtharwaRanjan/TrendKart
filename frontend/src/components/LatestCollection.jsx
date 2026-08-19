@@ -1,5 +1,5 @@
 import React from "react";
-import { ShopContext } from "../context/shopContext";
+import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
 
@@ -16,7 +16,8 @@ const LatestCollection = () => {
       <div className="text-center py-8 text-3xl">
         <Title text1="LATEST " text2="COLLECTION" />
         <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Lorem ipsum text.
+          Explore our latest collection of stylish and high-quality products,
+          designed to match every taste and occasion.
         </p>
       </div>
 

@@ -1,19 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/shopContext";
+import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
 
 const Collection = () => {
-  const { products } = useContext(ShopContext);
+  const { products, search, showSearch } = useContext(ShopContext);
 
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
-  const [sortType, setsortType] = useState("relevant");
+  const [sortType, setSortType] = useState("relevant");
 
-  const toggleCatgeory = (e) => {
+  const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
       setCategory((prev) => prev.filter((item) => item !== e.target.value));
     } else {
@@ -39,6 +39,11 @@ const Collection = () => {
         subCategory.includes(item.subCategory),
       );
     }
+    if (showSearch && search) {
+      productsCopy = productsCopy.filter((item) =>
+        item.name.toLowerCase().includes(search.toLowerCase()),
+      );
+    }
     setFilterProducts(productsCopy);
   };
 
@@ -59,7 +64,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory]);
+  }, [category, subCategory, search, showSearch, products]);
 
   useEffect(() => {
     sortProducts();
@@ -95,7 +100,7 @@ const Collection = () => {
                 type="checkbox"
                 className="w-3"
                 value="Men"
-                onChange={toggleCatgeory}
+                onChange={toggleCategory}
               />
               Men
             </p>
@@ -105,7 +110,7 @@ const Collection = () => {
                 type="checkbox"
                 className="w-3"
                 value="Women"
-                onChange={toggleCatgeory}
+                onChange={toggleCategory}
               />
               Women
             </p>
@@ -115,7 +120,7 @@ const Collection = () => {
                 type="checkbox"
                 className="w-3"
                 value="Kids"
-                onChange={toggleCatgeory}
+                onChange={toggleCategory}
               />
               Kids
             </p>
@@ -172,7 +177,7 @@ const Collection = () => {
           {/* Sort By */}
           <select
             className="border-2 border-gray-300 text-sm px-2"
-            onChange={(e) => setsortType(e.target.value)}
+            onChange={(e) => setSortType(e.target.value)}
           >
             <option value="relevant">Sort By: Relevant</option>
             <option value="low-high">Sort By: Low to High</option>
@@ -184,7 +189,7 @@ const Collection = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
           {filterProducts.map((item, index) => (
             <ProductItem
-              key={index}
+              key={item._id}
               id={item._id}
               image={item.image}
               name={item.name}
